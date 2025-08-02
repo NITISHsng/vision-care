@@ -28,7 +28,7 @@ export function getDistanceFromLatLonInMeters(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-export function isWithinRadius(lat1, lon1, lat2, lon2, radius = 100) {
+export function isWithinRadius(lat1, lon1, lat2, lon2, radius = 30) {
   const dist = getDistanceFromLatLonInMeters(lat1, lon1, lat2, lon2);
   return dist <= radius;
 }

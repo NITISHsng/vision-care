@@ -43,12 +43,13 @@ export default function CheckInButtons() {
       }
 
       const shop = shopSnap.data();
-      const inside = isWithinRadius(
-        coords.latitude,
-        coords.longitude,
-        shop.lat,
-        shop.lng
-      );
+const inside = isWithinRadius(
+  coords.latitude,
+  coords.longitude,
+  shop.lat,
+  shop.lng,
+  30
+);
 
       if (!inside) {
         setMessage({ text: 'You are not at the shop location.', success: false });
